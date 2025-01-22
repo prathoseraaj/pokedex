@@ -25,6 +25,7 @@ const Main = () => {
                    onChange={(e) => setPokemon(e.target.value.toLowerCase())}  />
             <button onClick={getpokedata}>search</button>
         </div>
+        {pokemondata && (
         <div className="pokemon-card">
             <h2>{pokemondata.name}</h2>
             <img src={pokemondata.image} alt={pokemondata.name} />
@@ -34,7 +35,7 @@ const Main = () => {
             <p>
                 <strong>Types:</strong> {pokemondata.types}
             </p>
-        </div>
+        </div>)}
     </div>
   )
 }
