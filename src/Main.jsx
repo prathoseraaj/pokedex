@@ -15,6 +15,7 @@ const Main = () => {
         image: data.sprites.front_default,
         abilities: data.abilities.map((ability) => ability.ability.name).join(', '),
         types: data.types.map((type) => type.type.name).join(', '),
+        species: data.species.name, 
     })
 
   }  
@@ -34,6 +35,9 @@ const Main = () => {
             </p>
             <p>
                 <strong>Types:</strong> {pokemondata.types}
+            </p>
+            <p>
+                <strong>Species:</strong> {pokemondata.species}
             </p>
         </div>)}
     </div>
