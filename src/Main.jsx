@@ -17,6 +17,7 @@ const Main = () => {
         types: data.types.map((type) => type.type.name).join(', '),
         species: data.species.name, 
     })
+    
 
   }  
   return (
