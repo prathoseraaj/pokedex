@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css';
 
 const Main = () => {
     const [pokemon,setPokemon] = useState('pikachu');
@@ -20,9 +21,19 @@ const Main = () => {
   return (
     <div className='pokedex'>
         <div className='card'>
-            <input type="text" placeholder='Pokemon Name' />
+            <input type="text" placeholder='Pokemon Name'
+                   onChange={(e) => setPokemon(e.target.value.toLowerCase())}  />
             <button onClick={getpokedata}>search</button>
-            
+        </div>
+        <div className="pokemon-card">
+            <h2>{pokemondata.name}</h2>
+            <img src={pokemondata.image} alt={pokemondata.name} />
+            <p>
+                <strong>Abilities:</strong> {pokemondata.abilities}
+            </p>
+            <p>
+                <strong>Types:</strong> {pokemondata.types}
+            </p>
         </div>
     </div>
   )
